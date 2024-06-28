@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What would Ben say?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap');
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Assistant', sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        #sentence-container {
+            font-size: 96px;
+            text-align: center;
+            padding: 20px;
+            max-width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <h1>What would Ben say?</h1>
+    <div id="sentence-container"></div>
+
+    <script>
+        const sentences = [
+            "לו אני את.ה",
+            "אדם נשך כלב",
+            "QR",
+            "תראו לי כזה, כזה, כזה וכזה",
+            "הו, בואו תראו משהו יפה",
+            "Witty",
+            "הומור בריטי",
+            "Resist the usual",
+            "Cannes Worthy",
+            "פיו פיו עם אקדח קפצונים"
+        ];
+
+        function displayRandomSentence() {
+            const randomIndex = Math.floor(Math.random() * sentences.length);
+            document.getElementById('sentence-container').textContent = sentences[randomIndex];
+        }
+
+        displayRandomSentence();
+    </script>
+</body>
+</html>
